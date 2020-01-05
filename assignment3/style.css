@@ -1,0 +1,20 @@
+html{
+font font-family: arial;
+}
+
+body{
+    background-color: #241623;
+}
+
+div{
+    color: #FFFEF9;
+    text-align: center;
+}
+
+.header{
+    background-color: #87BCDE;
+}
+
+.other{
+    background-color: #484D5C;
+}

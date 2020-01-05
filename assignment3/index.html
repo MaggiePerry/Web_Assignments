@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Local Weather</title>
+
+		<!-- Meta tags -->
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="keywords" content="Weather, COMP2513, Web, Assignment3">
+		<meta name="description" content="Purpose of this assignemnt is to use
+                                          Ajax to parse and then display JSON
+                                          data from a open data source.">
+		<meta name="author" content="Margaret Perry">
+
+		<!-- Bootstrap & jQuery includes -->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css"/>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.bundle.min.js"></script>
+
+		<!-- JavaScript file for this page -->
+		<script src="script.js"></script>
+
+		<!-- CSS file for this page -->
+		<link rel="stylesheet" href="style.css"/>
+
+	</head>
+
+	<body>
+        <!-- Setting the bakground colour and the page container -->
+
+		<div class="container-fluid">
+
+            <!-- Header row -->
+            <div class="header">
+			<div class="row">
+				<div class="col-sm-12 p-2 text-center">
+					<div class="pink">
+					<h1>Weather Page</h1>
+                    </div>
+                </div>
+			</div>
+            </div>
+
+            <!-- Select row -->
+            <div class="other">
+			<div class="row">
+				<div class="col-sm-6 p-2">
+					<div class="form-group">
+                        <!-- selects city ID to be used for requesting local weather info -->
+						<label for="city">Select a city:</label>
+						<select id="city">
+							<option value="">select a city...</option>
+							<option value="6183858">Wolfville</option>
+							<option value="6324729">Halifax</option>
+							<option value="6185217">Yarmouth</option>
+                            <option value="5899061">Berwick</option>
+						</select>
+                    </div>
+				</div>
+
+                <!-- Will display a loading GIF while waiting for requested data -->
+				<div class="col-sm-1 p-2">
+					<img id="pleaseWait" style="display: none; width: 40px;" alt="Please Wait" src="processing.gif"/>
+				</div>
+
+                <!-- Credit and link to open data website -->
+				<div class="col-sm-4 p-2">
+					<p>Weather brought to you by: <a href="https://openweathermap.org/" target="new">OpenWeather</a></p>
+				</div>
+            </div>
+        </div>
+
+            <!-- Body row -->
+			<div class="row">
+                <div class="col-sm-3 n-2"></div>
+
+                <!-- Area where weather data will be displayed -->
+				<div class="col-sm-7 n-2">
+					<div class="text-left" id="weather"></div>
+				</div>
+
+                <div class="col-sm-2 n-2"></div>
+			</div>
+
+		</div>
+        </div>
+
+	</body>
+
+</html>
